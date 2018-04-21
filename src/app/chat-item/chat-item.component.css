@@ -1,0 +1,9 @@
+.message {
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 400;
+}
+.avatar{
+    width: 50px;
+    margin-right: 20px;
+}

@@ -1,0 +1,35 @@
+.chat-window{
+    bottom:20px;
+	right:40px;
+    position:fixed;
+    float:right;
+    border:1px transparent;
+    border-radius:8px 8px 8px 8px;
+    width: 375px !important;
+    box-shadow: 0px 2px 10px 0px;
+}
+.chat-window > div > .panel{
+    border-radius: 5px 5px 0 0;
+}
+.msg_container_base{
+  background: #ffffff;
+  margin: 0;
+  padding: 0 10px 10px;
+  max-height:310px;
+
+}
+.top-bar {
+  background: #666;
+  color: white;
+  width: 341px;
+  position: relative;
+  overflow: hidden;
+  margin-left: -30px;
+  border-radius: 8px 8px 0px 0px;
+  height: 75px;
+}
+.msg_container {
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+}
