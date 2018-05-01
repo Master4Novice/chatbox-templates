@@ -8,7 +8,7 @@ import { Message } from '../message';
   templateUrl: './template-one.component.html',
   styleUrls: ['./template-one.component.css']
 })
-export class TemplateOneComponent implements OnInit {
+export class TemplateOne implements OnInit {
   
   public message : Message;
   public messages : Message[];

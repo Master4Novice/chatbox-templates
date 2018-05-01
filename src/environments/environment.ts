@@ -5,5 +5,8 @@
 
 export const environment = {
   production: false,
-  token: '68e7bad199594fe3bcd65ba590c33168'
+  token: '68e7bad199594fe3bcd65ba590c33168',
+  dialogflow: {
+    angularBot: '68e7bad199594fe3bcd65ba590c33168'
+  }
 };
