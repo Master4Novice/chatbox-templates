@@ -1,0 +1,11 @@
+.botFooter{
+    background-color: #01426a;
+    opacity: 0.6;
+}
+
+.copyright{
+    color:#ffffff;
+    font-weight: bold;
+    text-align: center ! important;
+    width: 100%;
+}

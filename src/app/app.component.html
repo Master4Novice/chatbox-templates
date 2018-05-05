@@ -1,15 +1,46 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
-  <div class="row text-warning">
+  <header class="row header"></header>
+  <div class="row">
     <div class="col-md-12">
-      <h1 class="text-center">
-        Welcome to {{ title }}!
+      <h1 class="text-center text-white text-uppercase">
+        Welcome to {{title}}
       </h1>
+      <hr class="hrOne"/>
     </div>
   </div>
   <div class="row">
-    <app-template-one></app-template-one>
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card">
+          <div class="card-header">
+            {{title}}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-success">Funda Of Life</h5>
+            <p class="card-text lifePara">Life is full of struggle and sometimes success. Less success and more struggle. Sometimes
+                its interesting to be in problem but sometimes it feels like hell. There is no way out to escape
+                life. We have to live it anyway. So, try to live life with fun and happiness. Life is only about
+                taking oxygen in and getting out carbon dioxide. Just let the natural processess go on and stop thinking
+                regarding anything that are around you, that's the only way to live life happily and stress-free.
+              </p>
+              <p class="card-text lifePara">The successful person is not happy with his success because he thinks that he deserves more
+                success than he has achieved, and the one who is failure, he keeps on finding faults in himself or
+                in others. We are actually not satisfied with ourselves. In any situation whether its success or failure
+                we keep on finding problems. But actually we all are living in an illusion. Life is illusionary, one day
+                we will die still we are running in a race, whether one is winning it or losing doesn't matter.
+              </p>
+          </div>
+      </div>    
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div>
+      <app-template-one></app-template-one>
   </div> 
+  <div class="container">
+    <footer class="row"></footer>
+  </div>  
 </div>
+
 
 

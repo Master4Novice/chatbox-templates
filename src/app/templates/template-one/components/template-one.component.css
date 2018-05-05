@@ -1,3 +1,14 @@
+.chatBox {
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: 0px 0px 10px 2px;
+    width: 376px;
+    position: fixed;
+    float:right;
+    height: 500px;
+    bottom: 70px;
+    right: 20px;
+    background-color: #FFFFFF;
+}
 .message {
     border-radius: 50px;
     margin: 0 15px 10px;
@@ -20,4 +31,27 @@
 .message.to + .message.to,
 .message.from + .message.from {
 margin-top: -10px;
+}
+.card-custom{
+    margin-left: -15px;
+    width: 376px !important;
+    height: 500px !important;
+    background-color: #363636;
+    border-radius: 8px 8px 8px 8px;
+}
+
+.card-custom-header{
+    height: 75px !important;
+    background-color: #363636;
+    color: #FFFFFF;
+}
+
+.card-custom-body{
+    height: 350px !important;
+    background-color: #FFFFFF;
+    overflow-y: auto;
+}
+.card-custom-footer{
+    height: 75px !important;
+    background-color: #FFFFFF;
 }

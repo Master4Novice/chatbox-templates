@@ -13,6 +13,8 @@ export class TemplateOneComponent implements OnInit {
   
   messages: Observable<Message[]>;
   formValue: string;
+  isPlusSign: boolean = false;
+  isMinusSign: boolean = true;
 
   constructor(public chat: TemplateOneService) { }
 

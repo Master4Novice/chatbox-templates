@@ -1,12 +1,26 @@
-<div>
-  <h1>Angular Bot</h1>
-  <ng-container *ngFor="let message of messages | async">
-      <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
-                                        'to':   message.sentBy === 'user' }">
-        {{ message.content }}
+<div class="col-md-6 chatBox">
+  <div class="card card-custom">
+    <div class="card-header card-custom-header">
+        <span>
+          <img src="../../../../assets/images/Motu.PNG" class="rounded-circle" alt="Life Bot" width="50px" height="50px">
+        </span>
+        <span style="font-weight: bold; margin-left: 10px;font-size: 20px;">Life Chat Bot</span>
+        <span class="fa fa-minus" *ngIf="isMinusSign" style="float:right;margin: 5px;font-size: 22px;"></span>
+        <span class="fa fa-plus" *ngIf="isPlusSign" style="float:right;margin: 5px;font-size: 22px;"></span>
+    </div>
+    <div class="card-body card-custom-body">
+        <ng-container *ngFor="let message of messages | async">
+            <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                              'to':   message.sentBy === 'user' }">
+              {{ message.content }}
+            </div>
+        </ng-container>
+    </div>
+    <div class="card-footer card-custom-footer">
+      <div class="form-group">
+        <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
+        <button (click)="sendMessage()">Send</button>
       </div>
-  </ng-container>
-  <label for="nameField">Your Message</label>
-  <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
-  <button (click)="sendMessage()">Send</button>
+    </div>
+  </div>
 </div>

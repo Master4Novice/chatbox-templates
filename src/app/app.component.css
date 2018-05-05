@@ -1,0 +1,17 @@
+.lifePara{
+    font-family: 'Comic Sans MS';
+    font-size: 14px;
+    color: rgba(111, 56, 148, 0.986);
+    font-weight: 300;
+}
+.hrOne{
+    background: rgb(71, 60, 60);
+    width: 550px;
+    height: 10px;
+}
+.content {
+    box-sizing: content-box;
+}
+.header{
+    margin-bottom: 40px !important;
+}

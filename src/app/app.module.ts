@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { TemplateOneModule } from './templates/template-one/template-one.module';
 
 import { AppComponent } from './app.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 //import { TemplateOne } from './template-one/template-one.component';
 //import { ChatListComponent } from './chat-list/chat-list.component';
 //import { ChatItemComponent } from './chat-item/chat-item.component';
@@ -14,7 +16,9 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent,
+    HeaderComponent
     //TemplateOne,
     //ChatListComponent,
     //ChatItemComponent,

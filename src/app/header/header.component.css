@@ -1,0 +1,11 @@
+.botHeader{
+    background-color: #01426a;
+    opacity: 0.6;
+}
+
+.chatBot{
+    color:#ffffff;
+    font-weight: bold;
+    text-align: center ! important;
+    width: 100%;
+}
