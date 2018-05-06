@@ -12,32 +12,33 @@ export class TemplateOneService {
 
   private baseURL: string = "https://api.dialogflow.com/v1/query?v=20150910";
   readonly token = environment.dialogflow.angularBot;
+  public botAvatarUrl:string = "../../../../../assets/images/Motu.PNG";
+  private userAvatarUrl:string = "../../../../../assets/images/user.png";
 
   conversation = new BehaviorSubject<Message[]>([]);
-  constructor(private http: Http) { }
+  constructor(private http: Http) {}
 
   converse(msg: string) {
-    const userMessage = new Message(msg, 'user');
+    const userMessage = new Message(msg, 'user', this.userAvatarUrl, new Date());
     this.update(userMessage);
     let data = {
       query : msg,
       lang: 'en',
       sessionId: '12345'
     }
-    return this.http.post(`${this.baseURL}`, data, {headers: this.getHeaders()})
-        .map(res => {
-          const speech = res.json();
-          const botMessage = new Message(speech, 'bot');
-          this.update(botMessage);
-    });
+    let response = this.http.post(`${this.baseURL}`, data, {headers: this.getHeaders()})
+             .map(res => {
+               return res.json();
+             });
+    response.subscribe(res => {
+      const botSpeech: string = res.result.fulfillment.speech;
+      const botMessage = new Message(botSpeech, 'bot', this.botAvatarUrl , new Date());
+      this.update(botMessage);
+    });  
   }
   
   update(msg: Message) {
     this.conversation.next([msg]);
-  }
-
-  public getResponse(query: string){
-    
   }
 
   public getHeaders(){

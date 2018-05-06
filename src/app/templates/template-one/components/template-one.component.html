@@ -8,18 +8,24 @@
         <span class="fa fa-minus" *ngIf="isMinusSign" style="float:right;margin: 5px;font-size: 22px;"></span>
         <span class="fa fa-plus" *ngIf="isPlusSign" style="float:right;margin: 5px;font-size: 22px;"></span>
     </div>
-    <div class="card-body card-custom-body">
+    <div class="card-body card-custom-body" #chatList>
+        <div class="date">{{todayDate | date:'fullDate'}}</div>
         <ng-container *ngFor="let message of messages | async">
-            <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
-                                              'to':   message.sentBy === 'user' }">
-              {{ message.content }}
+            <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot','to':   message.sentBy === 'user' }">
+              <div class="avatar" [ngClass]="{ 'from': message.sentBy === 'bot','to':   message.sentBy === 'user' }"><img  class="rounded-circle" [src]="message.avatar" height="40" width="40"/></div>
+              {{ message.content }}<br/>
+              <div class="time" [ngClass]="{ 'from': message.sentBy === 'bot','to':   message.sentBy === 'user' }"><span class="fa fa-clock-o"></span>&nbsp;{{message.chatTime | date:'hh:mm:ss aa'}}</div>
             </div>
         </ng-container>
     </div>
     <div class="card-footer card-custom-footer">
-      <div class="form-group">
-        <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
-        <button (click)="sendMessage()">Send</button>
+      <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Ask Motu about life..." [(ngModel)]="formValue" (keyup.enter)="sendMessage()" onfocus="this.placeholder=''" onblur="this.placeholder='Ask Motu about life...'">
+          <div class="input-group-append">
+            <button class="btn btn-outline-danger" (click)="sendMessage()" type="button">
+              <span class="fa fa-send-o"></span>
+            </button>
+          </div>
       </div>
     </div>
   </div>

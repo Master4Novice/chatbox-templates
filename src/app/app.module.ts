@@ -7,11 +7,6 @@ import { TemplateOneModule } from './templates/template-one/template-one.module'
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-//import { TemplateOne } from './template-one/template-one.component';
-//import { ChatListComponent } from './chat-list/chat-list.component';
-//import { ChatItemComponent } from './chat-item/chat-item.component';
-//import { ChatFormComponent } from './chat-form/chat-form.component';
-//import { ChatService } from './services/chat.service';
 
 
 @NgModule({
@@ -19,10 +14,6 @@ import { HeaderComponent } from './header/header.component';
     AppComponent,
     FooterComponent,
     HeaderComponent
-    //TemplateOne,
-    //ChatListComponent,
-    //ChatItemComponent,
-    //ChatFormComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +21,7 @@ import { HeaderComponent } from './header/header.component';
     HttpModule,
     TemplateOneModule
   ],
-  providers: [ ],//ChatService ],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
