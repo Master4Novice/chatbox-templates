@@ -22,7 +22,7 @@
     margin-left: 100px;
     text-align: right;
     border-radius: 16px 0px 16px 16px;
-    box-shadow: inset 0px 0px 9px 7px;
+    box-shadow: inset 0px 0px 20px 4px;
     float: right;
 }
 .message.from {
@@ -31,7 +31,7 @@
     margin-right: 100px;
     text-align: left;
     border-radius: 0px 16px 16px 16px;
-    box-shadow: inset 0px 0px 9px 7px;
+    box-shadow: inset 0px 0px 20px 4px;
 
 }
 .message.to + .message.to,
