@@ -62,8 +62,9 @@ margin-top: -10px;
     background-color: #FFFFFF;
 }
 input{
-    border-color: #dc3545;
-    color: #2095FE !important;
+    color: #dc3545 !important;
+    border: none;
+    width: 250px !important;
 }
 .avatar{
     height: 40px;
@@ -110,4 +111,15 @@ input{
 /* Handle on hover */
 .card-custom-body::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+.form-control:focus{
+  border: none !important;
+  box-shadow: none !important;
+}
+.input-group-btn-custom{
+  margin-left: 90px
+}
+.custom-button{
+  width: 65px !important;
+  border-radius: 20px;
 }

@@ -19,13 +19,17 @@
         </ng-container>
     </div>
     <div class="card-footer card-custom-footer">
-      <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Ask Motu about life..." [(ngModel)]="formValue" (keyup.enter)="sendMessage()" onfocus="this.placeholder=''" onblur="this.placeholder='Ask Motu about life...'">
-          <div class="input-group-append">
-            <button class="btn btn-outline-danger" (click)="sendMessage()" type="button">
-              <span class="fa fa-send-o"></span>
-            </button>
+      <div class="form-group">
+        <form>
+          <div class="input-group">
+            <input class="form-control col-md-6" autocomplete="off" name="chatText" type="text" placeholder="Ask Motu about life..." [(ngModel)]="formValue" (keyup.enter)="sendMessage()" onfocus="this.placeholder=''" onblur="this.placeholder='Ask Motu about life...'">
+            <span class="input-group-btn input-group-btn-custom">
+               <button class="btn btn-outline-danger custom-button" (click)="sendMessage()" type="button">
+                  <span class="fa fa-send-o"></span>
+               </button>
+            </span>
           </div>
+        </form>
       </div>
     </div>
   </div>
