@@ -92,3 +92,22 @@ input{
 .time.from{
     float:right;
 }
+
+.card-custom-body::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+.card-custom-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.card-custom-body::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.card-custom-body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
