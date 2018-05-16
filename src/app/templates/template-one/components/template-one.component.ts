@@ -13,8 +13,8 @@ export class TemplateOneComponent implements OnInit, AfterViewChecked {
 
   messages: Observable<Message[]>;
   formValue: string;
-  isPlusSign = false;
-  isMinusSign = true;
+  isPlusSign = true;
+  isMinusSign = false;
   todayDate: Date = new Date();
 
   @ViewChild('chatList', { read: ElementRef }) chatList: ElementRef;
@@ -47,4 +47,13 @@ export class TemplateOneComponent implements OnInit, AfterViewChecked {
     }
   }
 
+  maximize() {
+    this.isPlusSign = false;
+    this.isMinusSign = true;
+  }
+
+  minimize() {
+    this.isMinusSign = false;
+    this.isPlusSign = true;
+  }
 }
