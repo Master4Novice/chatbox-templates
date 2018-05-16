@@ -40,14 +40,6 @@
 .message.from + .message.from {
 margin-top: -10px;
 }
-.card-custom{
-    margin-left: -15px;
-    width: 376px !important;
-    height: 500px !important;
-    background-color: #363636;
-    border-radius: 8px 8px 8px 8px;
-}
-
 .card-custom-header{
     height: 75px !important;
     background-color: #363636;
@@ -145,20 +137,4 @@ textarea{
 }
 .card-footer-min{
   display: none !important;
-}
-.card-custom-min{
-  margin-left: -15px;
-  width: 376px !important;
-  background-color: #363636;
-  border-radius: 8px 8px 8px 8px;
-}
-.chatBox-min {
-  border-radius: 8px 8px 8px 8px;
-  box-shadow: 0px 0px 10px 2px;
-  width: 376px;
-  position: fixed;
-  float:right;
-  bottom: 70px;
-  right: 20px;
-  background-color: #FFFFFF;
 }
