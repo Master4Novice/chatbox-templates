@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TemplateOneComponent } from './components/template-one.component';
 import { TemplateOneService } from './services/template-one.service';
 
@@ -9,7 +10,8 @@ import { TemplateOneService } from './services/template-one.service';
   imports: [
     CommonModule,
     FormsModule,
-    HttpModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   exports: [TemplateOneComponent],
   declarations: [TemplateOneComponent],

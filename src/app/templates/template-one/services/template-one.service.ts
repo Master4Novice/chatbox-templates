@@ -10,10 +10,10 @@ import { Message } from '../../models/message';
 @Injectable()
 export class TemplateOneService {
 
-  private baseURL: string = "https://api.dialogflow.com/v1/query?v=20150910";
+  private baseURL = 'https://api.dialogflow.com/v1/query?v=20150910';
   readonly token = environment.dialogflow.angularBot;
-  public botAvatarUrl:string = "../../../../../assets/images/Motu.PNG";
-  private userAvatarUrl:string = "../../../../../assets/images/user.png";
+  public botAvatarUrl = '../../../../../assets/images/Motu.PNG';
+  private userAvatarUrl = '../../../../../assets/images/user.png';
 
   conversation = new BehaviorSubject<Message[]>([]);
   constructor(private http: Http) {}
@@ -21,12 +21,12 @@ export class TemplateOneService {
   converse(msg: string) {
     const userMessage = new Message(msg, 'user', this.userAvatarUrl, new Date());
     this.update(userMessage);
-    let data = {
+    const data = {
       query : msg,
       lang: 'en',
       sessionId: '12345'
     }
-    let response = this.http.post(`${this.baseURL}`, data, {headers: this.getHeaders()})
+    const response = this.http.post(`${this.baseURL}`, data, {headers: this.getHeaders()})
              .map(res => {
                return res.json();
              });
@@ -34,15 +34,15 @@ export class TemplateOneService {
       const botSpeech: string = res.result.fulfillment.speech;
       const botMessage = new Message(botSpeech, 'bot', this.botAvatarUrl , new Date());
       this.update(botMessage);
-    });  
+    });
   }
-  
+
   update(msg: Message) {
     this.conversation.next([msg]);
   }
 
   public getHeaders(){
-    let headers = new Headers();
+    const headers = new Headers();
     headers.append('Authorization', `Bearer ${this.token}`);
     return headers;
   }
