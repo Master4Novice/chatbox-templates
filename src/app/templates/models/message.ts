@@ -1,11 +1,3 @@
-import { StringifyOptions } from "querystring";
-
 export class Message {
-    constructor(
-        public content: string, 
-        public sentBy: string, 
-        public avatar: string,
-        public chatTime: Date) {
-            
-        }
+    constructor(public content: string, public sentBy: string, public avatar: string, public chatTime: Date) {}
 }

@@ -41,7 +41,7 @@ export class TemplateOneService {
     this.conversation.next([msg]);
   }
 
-  public getHeaders(){
+  public getHeaders() {
     const headers = new Headers();
     headers.append('Authorization', `Bearer ${this.token}`);
     return headers;
