@@ -132,9 +132,10 @@ textarea{
   border: none;
   overflow: hidden;
 }
-.card-body-min{
-  display: none !important;
-}
-.card-footer-min{
-  display: none !important;
+.card-custom{
+  margin-left: -15px;
+  width: 376px;
+  background-color: #363636;
+  border-radius: 8px 8px 8px 8px;
+  height: 500px;
 }

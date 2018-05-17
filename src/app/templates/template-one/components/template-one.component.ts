@@ -10,47 +10,37 @@ import { TemplateOneService } from '../services/template-one.service';
   templateUrl: './template-one.component.html',
   styleUrls: ['./template-one.component.css'],
   animations: [
-    trigger('minOrMaxWindow', [
+    trigger('chatBox', [
       state('inactive', style({
-        borderRadius: '8px 8px 8px 8px',
-        boxShadow: '0px 0px 10px 2px',
-        width: '376px',
-        position: 'fixed',
-        float: 'right',
-        bottom: '70px',
-        right: '20px',
-        backgroundColor: '#FFFFFF'
+        height: '75px',
+        borderRadius: '8px'
       })),
       state('active',   style({
-        borderRadius: '8px 8px 8px 8px',
-        boxShadow: '0px 0px 10px 2px',
-        width: '376px',
-        position: 'fixed',
-        float: 'right',
-        bottom: '70px',
-        right: '20px',
-        backgroundColor: '#FFFFFF',
         height: '500px'
       })),
-      transition('inactive => active', animate('100ms ease-in')),
-      transition('active => inactive', animate('100ms ease-out'))
+      transition('inactive => active', animate('1ms')),
+      transition('active => inactive', animate('1ms'))
     ]),
-    trigger('minOrMaxBody', [
+    trigger('chatBoxHeader', [
       state('inactive', style({
-        marginLeft: '-15px',
-        width: '376px',
-        backgroundColor: '#363636',
-        borderRadius: '8px 8px 8px 8px'
+        height: '75px',
+        borderRadius: '8px'
       })),
       state('active',   style({
-        marginLeft: '-15px',
-        width: '376px',
-        backgroundColor: '#363636',
-        borderRadius: '8px 8px 8px 8px',
-        height: '500px'
+        height: '75px'
       })),
-      transition('inactive => active', animate('100ms ease-in')),
-      transition('active => inactive', animate('100ms ease-out'))
+      transition('inactive => active', animate('1ms')),
+      transition('active => inactive', animate('1ms'))
+    ]),
+    trigger('chatBoxDisplay', [
+      state('inactive', style({
+        display: 'none'
+      })),
+      state('active',   style({
+        display: 'block'
+      })),
+      transition('inactive => active', animate('200ms 2000ms')),
+      transition('active => inactive', animate('200ms 2000ms'))
     ])
   ]
 })
@@ -66,7 +56,7 @@ export class TemplateOneComponent implements OnInit, AfterViewChecked {
   @ViewChild('chatList', { read: ElementRef }) chatList: ElementRef;
 
   constructor(public chat: TemplateOneService) {
-    const motuBotMessage = 'Hello Friends !! Welcome to the world of Motu. How may I help you ?';
+    const motuBotMessage = 'Hello Friend !! Welcome to the world of  MOTU. I am here to help you on your life related problems';
     const botMessage = new Message(motuBotMessage, 'bot', chat.botAvatarUrl, new Date());
     chat.update(botMessage);
   }
@@ -97,13 +87,11 @@ export class TemplateOneComponent implements OnInit, AfterViewChecked {
     this.isPlusSign = false;
     this.isMinusSign = true;
     this.minOrMax = 'active';
-    console.log('active');
   }
 
   minimize() {
     this.isMinusSign = false;
     this.isPlusSign = true;
     this.minOrMax = 'inactive';
-    console.log('inactive');
   }
 }
